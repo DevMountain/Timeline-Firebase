@@ -10,6 +10,8 @@ import Foundation
 
 class Timeline {
     
+    static let sharedTimeline = Timeline()
+    
     var timeline: [Post] {
         
         return PostController.mockPosts()
