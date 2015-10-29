@@ -11,7 +11,7 @@ import Foundation
 class UserController {
     
     static func currentUser() -> User! {
-        return mockUsers().first
+        return nil
     }
     
     static func userForIdentifier(identifier: String, completion: (user: User?) -> Void) {
@@ -34,12 +34,12 @@ class UserController {
         completion(followers: mockUsers())
     }
     
-    static func authenticateUser(username: String, password: String, completion: (success: Bool, user: User?) -> Void) {
+    static func authenticateUser(email: String, password: String, completion: (success: Bool, user: User?) -> Void) {
         
         completion(success: true, user: mockUsers().first)
     }
     
-    static func createUser(username: String, password: String, completion: (success: Bool, user: User?) -> Void) {
+    static func createUser(email: String, username: String, password: String, bio: String?, url: String?, completion: (success: Bool, user: User?) -> Void) {
         
         completion(success: true, user: mockUsers().first)
     }
