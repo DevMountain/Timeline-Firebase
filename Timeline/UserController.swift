@@ -11,12 +11,17 @@ import Foundation
 class UserController {
     
     static func currentUser() -> User! {
-        return nil
+        return mockUsers().first
     }
     
     static func userForIdentifier(identifier: String, completion: (user: User?) -> Void) {
         
         completion(user: mockUsers().first)
+    }
+    
+    static func fetchAllUsers(completion: (users: [User]) -> Void) {
+        
+        completion(users: mockUsers())
     }
     
     static func followUser(user: User, completion: (success: Bool) -> Void) {
@@ -26,7 +31,7 @@ class UserController {
     
     static func followedByUser(user: User, completion: (followed: [User]?) -> Void) {
         
-        completion(followed: mockUsers())
+        completion(followed: [mockUsers().first!])
     }
     
     static func followersForUser(user: User, completion: (followers: [User]?) -> Void) {

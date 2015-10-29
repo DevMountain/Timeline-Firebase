@@ -12,7 +12,7 @@ class Timeline {
     
     static let sharedTimeline = Timeline()
     
-    var timeline: [Post] {
+    var posts: [Post] {
         
         return PostController.mockPosts()
     }
