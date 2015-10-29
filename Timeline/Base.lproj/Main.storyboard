@@ -43,15 +43,15 @@
                                                 <animations/>
                                                 <state key="normal" title="Sign Up"/>
                                                 <connections>
-                                                    <segue destination="7aN-H3-BLL" kind="show" id="NP6-bu-PNp"/>
+                                                    <segue destination="7aN-H3-BLL" kind="show" identifier="toSignup" id="NP6-bu-PNp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84n-82-cRc">
                                                 <rect key="frame" x="280" y="0.0" width="280" height="60"/>
                                                 <animations/>
-                                                <state key="normal" title="Sign In"/>
+                                                <state key="normal" title="Log In"/>
                                                 <connections>
-                                                    <segue destination="7aN-H3-BLL" kind="show" id="lh2-0f-uaa"/>
+                                                    <segue destination="7aN-H3-BLL" kind="show" identifier="toLogin" id="lh2-0f-uaa"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -423,6 +423,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="tBm-IS-0pb"/>
         <segue reference="kbP-A0-Z5M"/>
-        <segue reference="lh2-0f-uaa"/>
+        <segue reference="NP6-bu-PNp"/>
     </inferredMetricsTieBreakers>
 </document>
