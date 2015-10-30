@@ -29,6 +29,11 @@ class UserController {
         completion(success: true)
     }
     
+    static func userFollowedByUser(user: User, followedBy: User, completion: (follows: Bool) -> Void ) {
+        
+        completion(follows: true)
+    }
+    
     static func followedByUser(user: User, completion: (followed: [User]?) -> Void) {
         
         completion(followed: [mockUsers().first!])
