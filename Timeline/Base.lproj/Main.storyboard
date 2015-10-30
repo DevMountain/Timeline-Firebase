@@ -294,9 +294,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="soA-FN-6nD"/>
+                    <navigationItem key="navigationItem" id="eCE-zr-tk0"/>
                     <connections>
                         <segue destination="8L1-Pe-3t0" kind="show" id="tBm-IS-0pb"/>
                     </connections>
@@ -315,7 +315,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SxD-5n-pLC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" id="SxD-5n-pLC">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SxD-5n-pLC" id="YWb-iu-Mz6">
@@ -325,7 +325,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="vb6-XA-Qe7" kind="show" trigger="accessoryAction" id="kbP-A0-Z5M"/>
+                                    <segue destination="vb6-XA-Qe7" kind="show" identifier="toProfileView" id="HFa-zO-F41"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -334,11 +334,59 @@
                             <outlet property="delegate" destination="HzF-Jm-xB6" id="PC7-dF-qxL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="A3E-8R-jms"/>
+                    <navigationItem key="navigationItem" id="A3E-8R-jms">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="hMU-w7-R6x">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <segments>
+                                <segment title="Friends"/>
+                                <segment title="Add Friend"/>
+                            </segments>
+                            <connections>
+                                <action selector="selectedIndexChanged:" destination="HzF-Jm-xB6" eventType="valueChanged" id="l00-SN-9NC"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="modeSegmentedControl" destination="hMU-w7-R6x" id="m7u-5S-iGS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPL-bD-4rH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1950" y="1299"/>
+        </scene>
+        <!--User List Search Results Table View Controller-->
+        <scene sceneID="eB0-Bu-FvO">
+            <objects>
+                <tableViewController storyboardIdentifier="userSearchResults" id="eGg-5H-djr" customClass="UserListSearchResultsTableViewController" customModule="Timeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nhu-kM-V4J">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="userResultCell" id="LO1-At-kUo">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LO1-At-kUo" id="sMg-nK-YbC">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eGg-5H-djr" id="iys-7i-L0e"/>
+                            <outlet property="delegate" destination="eGg-5H-djr" id="cTN-iE-MtS"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XL2-tW-AJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950" y="2035"/>
         </scene>
         <!--Timeline-->
         <scene sceneID="gp0-tQ-BzG">
@@ -422,7 +470,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="tBm-IS-0pb"/>
-        <segue reference="kbP-A0-Z5M"/>
+        <segue reference="HFa-zO-F41"/>
         <segue reference="NP6-bu-PNp"/>
     </inferredMetricsTieBreakers>
 </document>

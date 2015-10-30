@@ -28,6 +28,7 @@
 		687060D01BE2AE840074614B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060CF1BE2AE840074614B /* ProfileViewController.swift */; };
 		687060D21BE2AE910074614B /* AddPhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060D11BE2AE910074614B /* AddPhotoTableViewController.swift */; };
 		687060D41BE2AEAE0074614B /* LoginSignupPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060D31BE2AEAE0074614B /* LoginSignupPickerViewController.swift */; };
+		687060D61BE308B60074614B /* UserListSearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060D51BE308B60074614B /* UserListSearchResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		687060CF1BE2AE840074614B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		687060D11BE2AE910074614B /* AddPhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoTableViewController.swift; sourceTree = "<group>"; };
 		687060D31BE2AEAE0074614B /* LoginSignupPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignupPickerViewController.swift; sourceTree = "<group>"; };
+		687060D51BE308B60074614B /* UserListSearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListSearchResultsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				687060A71BE1D3740074614B /* Main.storyboard */,
 				687060CB1BE2AE6A0074614B /* PostDetailTableViewController.swift */,
 				687060CD1BE2AE780074614B /* UserListSearchTableViewController.swift */,
+				687060D51BE308B60074614B /* UserListSearchResultsTableViewController.swift */,
 				687060CF1BE2AE840074614B /* ProfileViewController.swift */,
 				687060D11BE2AE910074614B /* AddPhotoTableViewController.swift */,
 				687060D31BE2AEAE0074614B /* LoginSignupPickerViewController.swift */,
@@ -323,6 +326,7 @@
 				687060AE1BE1D3C20074614B /* User.swift in Sources */,
 				687060781BE1D16D0074614B /* AppDelegate.swift in Sources */,
 				687060B01BE1D3C20074614B /* Comment.swift in Sources */,
+				687060D61BE308B60074614B /* UserListSearchResultsTableViewController.swift in Sources */,
 				687060C11BE1D55D0074614B /* PostController.swift in Sources */,
 				687060CA1BE2AB730074614B /* TimelineTableViewController.swift in Sources */,
 				687060B11BE1D3C20074614B /* Like.swift in Sources */,
