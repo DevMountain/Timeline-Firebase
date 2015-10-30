@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Like {
+struct Like: Equatable {
 
     let username: String
     let postIdentifier: String
@@ -20,4 +20,9 @@ struct Like {
         self.postIdentifier = postIdentifier
         self.identifier = identifier
     }
+}
+
+func ==(lhs: Like, rhs: Like) -> Bool {
+    
+    return (lhs.username == rhs.username) && (lhs.identifier == rhs.identifier)
 }

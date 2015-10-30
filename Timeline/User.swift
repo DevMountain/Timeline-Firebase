@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct User {
+struct User: Equatable {
     
     let username: String
     var bio: String?
@@ -22,5 +22,9 @@ struct User {
         self.bio = bio
         self.url = url
     }
+}
 
+func ==(lhs: User, rhs: User) -> Bool {
+    
+    return (lhs.username == rhs.username) && (lhs.identifier == rhs.identifier)
 }

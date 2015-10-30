@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Post {
+struct Post: Equatable {
     
     let imageEndpoint: String
     let caption: String?
@@ -26,4 +26,9 @@ struct Post {
         self.comments = comments
         self.likes = likes
     }
+}
+
+func ==(lhs: Post, rhs: Post) -> Bool {
+    
+    return (lhs.username == rhs.username) && (lhs.identifier == rhs.identifier)
 }
