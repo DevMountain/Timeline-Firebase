@@ -186,22 +186,60 @@
         <scene sceneID="pE6-AW-cRV">
             <objects>
                 <tableViewController title="Timeline" id="MCw-XX-PFW" customClass="TimelineTableViewController" customModule="Timeline" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Foa-Z5-Mxg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="188" sectionHeaderHeight="28" sectionFooterHeight="28" id="Foa-Z5-Mxg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gkP-HZ-w26">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="188" id="gkP-HZ-w26" customClass="PostTableViewCell" customModule="Timeline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="188"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gkP-HZ-w26" id="d4j-Oc-ucY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="188"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UBB-qA-f75">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="188"/>
+                                            <animations/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2VZ-fd-8m8">
+                                            <rect key="frame" x="8" y="153" width="584" height="27"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5u-Mp-mRA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="476" height="27"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ooo-rg-ig2">
+                                                    <rect key="frame" x="476" y="0.0" width="108" height="27"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </stackView>
+                                    </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="2VZ-fd-8m8" firstAttribute="leading" secondItem="d4j-Oc-ucY" secondAttribute="leadingMargin" id="4PC-Nl-FOK"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2VZ-fd-8m8" secondAttribute="trailing" id="5hr-FP-7fx"/>
+                                        <constraint firstAttribute="bottom" secondItem="UBB-qA-f75" secondAttribute="bottom" id="GoP-Kb-wen"/>
+                                        <constraint firstItem="UBB-qA-f75" firstAttribute="leading" secondItem="d4j-Oc-ucY" secondAttribute="leading" id="JEo-52-StK"/>
+                                        <constraint firstItem="UBB-qA-f75" firstAttribute="top" secondItem="d4j-Oc-ucY" secondAttribute="top" id="Xr8-Ab-Usv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2VZ-fd-8m8" secondAttribute="bottom" id="aMc-HH-0ND"/>
+                                        <constraint firstAttribute="trailing" secondItem="UBB-qA-f75" secondAttribute="trailing" id="bKJ-CZ-QuG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="commentsLabel" destination="Ooo-rg-ig2" id="z59-uP-679"/>
+                                    <outlet property="likesLabel" destination="M5u-Mp-mRA" id="GMS-Le-o5w"/>
+                                    <outlet property="postImageView" destination="UBB-qA-f75" id="JBH-Hk-IwB"/>
                                     <segue destination="8L1-Pe-3t0" kind="show" id="AFK-dB-Zfk"/>
                                 </connections>
                             </tableViewCell>
@@ -212,7 +250,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Timeline" id="LPG-zh-ope">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kWP-fp-b85"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="kWP-fp-b85">
+                            <connections>
+                                <segue destination="rLQ-qX-j8b" kind="presentation" id="Uwl-4S-gOE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pl4-Vd-6Ig" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -366,7 +408,7 @@
                                                         <constraint firstAttribute="width" secondItem="3qa-Tf-wIJ" secondAttribute="height" multiplier="1:1" id="Q9n-Lf-NVY"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1Q-m0-ffB">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1Q-m0-ffB">
                                                     <rect key="frame" x="251" y="202" width="42" height="21"/>
                                                     <animations/>
                                                     <constraints>
@@ -376,15 +418,15 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="gAL-XM-X7m">
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="gAL-XM-X7m">
                                                     <rect key="frame" x="40" y="233" width="464" height="61"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQl-zu-Oof">
+                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQl-zu-Oof">
                                                             <rect key="frame" x="0.0" y="0.0" width="75" height="61"/>
                                                             <animations/>
                                                             <state key="normal" title="Homepage"/>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMw-1J-lIg">
+                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMw-1J-lIg">
                                                             <rect key="frame" x="383" y="0.0" width="81" height="61"/>
                                                             <animations/>
                                                             <state key="normal" title="Follow User"/>
@@ -603,7 +645,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="NP6-bu-PNp"/>
+        <segue reference="AFK-dB-Zfk"/>
         <segue reference="Z8B-Ql-z71"/>
-        <segue reference="HFl-kc-wcQ"/>
     </inferredMetricsTieBreakers>
 </document>

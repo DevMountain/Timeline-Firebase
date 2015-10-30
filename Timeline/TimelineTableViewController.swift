@@ -17,17 +17,25 @@ class TimelineTableViewController: UITableViewController {
             
             self.tabBarController?.performSegueWithIdentifier("toLoginSignup", sender: nil)
         }
+        
+        Timeline.sharedTimeline.posts
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-
-        return 0
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 0
+        return Timeline.sharedTimeline.posts.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("postCell", forIndexPath: indexPath) as! PostTableViewCell
+        
+        let post = Timeline.sharedTimeline.posts[indexPath.row]
+        
+        cell.updateWithPost(post)
+        
+        return cell
     }
 }

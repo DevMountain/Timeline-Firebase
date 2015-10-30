@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		686A8D4B1BE42620006E0056 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A8D4A1BE42620006E0056 /* PostTableViewCell.swift */; };
 		687060781BE1D16D0074614B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060771BE1D16D0074614B /* AppDelegate.swift */; };
 		6870607F1BE1D16D0074614B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6870607E1BE1D16D0074614B /* Assets.xcassets */; };
 		687060821BE1D16D0074614B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687060801BE1D16D0074614B /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		686A8D4A1BE42620006E0056 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		687060741BE1D16D0074614B /* Timeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		687060771BE1D16D0074614B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6870607E1BE1D16D0074614B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +135,8 @@
 			children = (
 				687060771BE1D16D0074614B /* AppDelegate.swift */,
 				687060A71BE1D3740074614B /* Main.storyboard */,
+				687060C91BE2AB730074614B /* TimelineTableViewController.swift */,
+				686A8D4A1BE42620006E0056 /* PostTableViewCell.swift */,
 				68F4CDF31BE3FC0E00D8CD83 /* ProfileHeaderCollectionReusableView.swift */,
 				68F4CDF51BE4039500D8CD83 /* ImageCollectionViewCell.swift */,
 				687060CB1BE2AE6A0074614B /* PostDetailTableViewController.swift */,
@@ -142,7 +146,6 @@
 				687060D11BE2AE910074614B /* AddPhotoTableViewController.swift */,
 				687060D31BE2AEAE0074614B /* LoginSignupPickerViewController.swift */,
 				687060C51BE292170074614B /* LoginSignupViewController.swift */,
-				687060C91BE2AB730074614B /* TimelineTableViewController.swift */,
 				687060C41BE1D5660074614B /* Model Controllers */,
 				687060B21BE1D3C80074614B /* Model */,
 				6870607E1BE1D16D0074614B /* Assets.xcassets */,
@@ -330,6 +333,7 @@
 				687060AF1BE1D3C20074614B /* Post.swift in Sources */,
 				687060D01BE2AE840074614B /* ProfileViewController.swift in Sources */,
 				687060AE1BE1D3C20074614B /* User.swift in Sources */,
+				686A8D4B1BE42620006E0056 /* PostTableViewCell.swift in Sources */,
 				687060781BE1D16D0074614B /* AppDelegate.swift in Sources */,
 				687060B01BE1D3C20074614B /* Comment.swift in Sources */,
 				687060D61BE308B60074614B /* UserListSearchResultsTableViewController.swift in Sources */,
