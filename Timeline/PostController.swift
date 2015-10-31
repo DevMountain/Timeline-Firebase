@@ -31,7 +31,7 @@ class PostController {
         completion(success: true)
     }
     
-    static func addCommentToPost(comment: Comment, post: Post, completion: (success: Bool, post: Post?) -> Void) {
+    static func addCommentWithTextToPost(text: String, post: Post, completion: (success: Bool, post: Post?) -> Void?) {
     
         completion(success: true, post: post)
     }
@@ -41,7 +41,7 @@ class PostController {
         completion(success: true, post: mockPosts().first)
     }
     
-    static func addLikeToPost(like: Like, post: Post, completion: (success: Bool, post: Post?) -> Void) {
+    static func addLikeToPost(post: Post, completion: (success: Bool, post: Post?) -> Void) {
         
         completion(success: true, post: post)
     }
@@ -55,7 +55,14 @@ class PostController {
 
         let sampleImageIdentifier = "-K1l4125TYvKMc7rcp5e"
         
-        let post1 = Post(imageEndpoint: sampleImageIdentifier, caption: "Awesome shot of the beach.")
+        let like1 = Like(username: "darth", postIdentifier: "1234")
+        let like2 = Like(username: "look", postIdentifier: "4566")
+        let like3 = Like(username: "em0r0r", postIdentifier: "43212")
+        
+        let comment1 = Comment(username: "ob1kenob", text: "use the force", postIdentifier: "1234")
+        let comment2 = Comment(username: "darth", text: "join the dark side", postIdentifier: "4566")
+        
+        let post1 = Post(imageEndpoint: sampleImageIdentifier, caption: "Nice shot!", comments: [comment1, comment2], likes: [like1, like2, like3])
         let post2 = Post(imageEndpoint: sampleImageIdentifier, caption: "Great lookin' kids!")
         let post3 = Post(imageEndpoint: sampleImageIdentifier, caption: "Love the way she looks when she smiles like that.")
         
