@@ -415,7 +415,7 @@
         <scene sceneID="j80-vt-QVA">
             <objects>
                 <tableViewController title="Add Photo" id="Hrc-Qz-Aaa" customClass="AddPhotoTableViewController" customModule="Timeline" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6KP-Ze-wpP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6KP-Ze-wpP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <animations/>
@@ -426,25 +426,67 @@
                             <animations/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
                             <state key="normal" title="Add Photo"/>
+                            <connections>
+                                <action selector="addPhotoTapped:" destination="Hrc-Qz-Aaa" eventType="touchUpInside" id="RKl-fA-GcO"/>
+                            </connections>
                         </button>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TNS-UF-Iil">
-                                <rect key="frame" x="0.0" y="311" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TNS-UF-Iil" id="VOI-rh-ewI">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                        </prototypes>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lay-Oh-acN">
+                            <rect key="frame" x="0.0" y="355" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <state key="normal" title="Submit"/>
+                            <connections>
+                                <action selector="submitButtonTapped:" destination="Hrc-Qz-Aaa" eventType="touchUpInside" id="LR0-ob-SRn"/>
+                            </connections>
+                        </button>
+                        <sections>
+                            <tableViewSection headerTitle="Add a Caption" id="yBD-zo-six">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TNS-UF-Iil">
+                                        <rect key="frame" x="0.0" y="311" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TNS-UF-Iil" id="VOI-rh-ewI">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gBV-dP-QLk">
+                                                    <rect key="frame" x="14" y="0.0" width="571" height="44"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Hrc-Qz-Aaa" id="6BL-3u-4RX"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="gBV-dP-QLk" secondAttribute="bottom" id="0Sk-d1-VwP"/>
+                                                <constraint firstAttribute="trailing" secondItem="gBV-dP-QLk" secondAttribute="trailing" constant="15" id="MDd-u1-1pE"/>
+                                                <constraint firstItem="gBV-dP-QLk" firstAttribute="top" secondItem="VOI-rh-ewI" secondAttribute="top" id="fJm-Pu-lP1"/>
+                                                <constraint firstItem="gBV-dP-QLk" firstAttribute="leading" secondItem="VOI-rh-ewI" secondAttribute="leading" constant="14" id="p6i-r0-3W1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="Hrc-Qz-Aaa" id="QvN-hS-hFv"/>
                             <outlet property="delegate" destination="Hrc-Qz-Aaa" id="XMN-Ux-Sdh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Photo" id="nxz-aI-diu"/>
+                    <navigationItem key="navigationItem" title="Add Photo" id="nxz-aI-diu">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="7RV-eR-pqo">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="Hrc-Qz-Aaa" id="ghy-po-tL0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photoButton" destination="nxb-ms-cbT" id="YcS-iC-HUS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSs-5x-Fie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
