@@ -38,4 +38,20 @@ class TimelineTableViewController: UITableViewController {
         
         return cell
     }
+    
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            
+            if let destinationViewController = segue.destinationViewController as? PostDetailTableViewController {
+                
+                _ = destinationViewController.view
+                
+                destinationViewController.updateWithPost(Timeline.sharedTimeline.posts[indexPath.row])
+            }
+        }
+    }
 }

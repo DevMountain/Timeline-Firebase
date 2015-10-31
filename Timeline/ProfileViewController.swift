@@ -68,14 +68,21 @@ class ProfileViewController: UIViewController, UICollectionViewDataSource, UICol
         return view
     }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
+        let cell = sender as! UICollectionViewCell
+        
+        if let selectedIndex = collectionView.indexPathForCell(cell)?.item {
+            
+            if let destinationViewController = segue.destinationViewController as? PostDetailTableViewController {
+                
+                _ = destinationViewController.view
+                
+                destinationViewController.updateWithPost(userPosts[selectedIndex])
+            }
+        }
+    }
 }

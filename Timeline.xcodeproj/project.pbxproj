@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6836484B1BE4359600B538CE /* PostCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6836484A1BE4359600B538CE /* PostCommentTableViewCell.swift */; };
 		686A8D4B1BE42620006E0056 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A8D4A1BE42620006E0056 /* PostTableViewCell.swift */; };
 		687060781BE1D16D0074614B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060771BE1D16D0074614B /* AppDelegate.swift */; };
 		6870607F1BE1D16D0074614B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6870607E1BE1D16D0074614B /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6836484A1BE4359600B538CE /* PostCommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCommentTableViewCell.swift; sourceTree = "<group>"; };
 		686A8D4A1BE42620006E0056 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		687060741BE1D16D0074614B /* Timeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		687060771BE1D16D0074614B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				687060A71BE1D3740074614B /* Main.storyboard */,
 				687060C91BE2AB730074614B /* TimelineTableViewController.swift */,
 				686A8D4A1BE42620006E0056 /* PostTableViewCell.swift */,
+				6836484A1BE4359600B538CE /* PostCommentTableViewCell.swift */,
 				68F4CDF31BE3FC0E00D8CD83 /* ProfileHeaderCollectionReusableView.swift */,
 				68F4CDF51BE4039500D8CD83 /* ImageCollectionViewCell.swift */,
 				687060CB1BE2AE6A0074614B /* PostDetailTableViewController.swift */,
@@ -335,6 +338,7 @@
 				687060AE1BE1D3C20074614B /* User.swift in Sources */,
 				686A8D4B1BE42620006E0056 /* PostTableViewCell.swift in Sources */,
 				687060781BE1D16D0074614B /* AppDelegate.swift in Sources */,
+				6836484B1BE4359600B538CE /* PostCommentTableViewCell.swift in Sources */,
 				687060B01BE1D3C20074614B /* Comment.swift in Sources */,
 				687060D61BE308B60074614B /* UserListSearchResultsTableViewController.swift in Sources */,
 				687060C11BE1D55D0074614B /* PostController.swift in Sources */,
