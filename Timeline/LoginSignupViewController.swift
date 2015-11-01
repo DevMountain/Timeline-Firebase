@@ -69,7 +69,7 @@ class LoginSignupViewController: UIViewController {
                 
             case .Signup:
                 
-                UserController.createUser(emailField.text!, username: passwordField.text!, password: passwordField.text!, bio: bioField.text, url: urlField.text, completion: { (success, user) -> Void in
+                UserController.createUser(emailField.text!, username: usernameField.text!, password: passwordField.text!, bio: bioField.text, url: urlField.text, completion: { (success, user) -> Void in
                     if success {
                         
                         self.dismissViewControllerAnimated(true, completion: nil)
