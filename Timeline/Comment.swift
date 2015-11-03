@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct Comment: Equatable {
+struct Comment: Equatable, FirebaseType {
+    
+    private let PostKey = "post"
+    private let UserKey = "username"
+    private let TextKey = "text"
 
     let username: String
     let text: String
@@ -22,6 +26,38 @@ struct Comment: Equatable {
         self.text = text
         self.identifier = identifier
     }
+    
+    // MARK: FirbaseType
+    
+    var endpoint: String {
+        
+        return "/posts/\(self.postIdentifier)/comments/"
+    }
+    
+    var jsonValue: [String: AnyObject] {
+        
+        return [PostKey: self.postIdentifier, UserKey: self.username, TextKey: self.text]
+    }
+    
+    init?(json: [String: AnyObject], identifier: String) {
+        
+        guard let postIdentifier = json[PostKey] as? String,
+            let username = json[UserKey] as? String,
+            let text = json[TextKey] as? String else {
+                
+                self.postIdentifier = ""
+                self.username = ""
+                self.text = ""
+                
+                return nil
+        }
+        
+        self.postIdentifier = postIdentifier
+        self.username = username
+        self.text = text
+        self.identifier = identifier
+    }
+
 }
 
 func ==(lhs: Comment, rhs: Comment) -> Bool {

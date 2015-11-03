@@ -19,7 +19,7 @@ class UserListSearchTableViewController: UITableViewController, UISearchResultsU
             switch self {
                 
             case .Friends:
-                UserController.followedByUser(UserController.currentUser(), completion: { (followers) -> Void in
+                UserController.followedByUser(UserController.sharedController.currentUser, completion: { (followers) -> Void in
                     completion(users: followers)
                 })
                 
@@ -85,11 +85,11 @@ class UserListSearchTableViewController: UITableViewController, UISearchResultsU
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         
-        let searchTerm = searchController.searchBar.text!
+        let searchTerm = searchController.searchBar.text!.lowercaseString
         
         let resultsViewController = searchController.searchResultsController as! UserListSearchResultsTableViewController
         
-        resultsViewController.usersDataSource = self.usersDataSource.filter({$0.username.containsString(searchTerm)})
+        resultsViewController.usersDataSource = self.usersDataSource.filter({$0.username.lowercaseString.containsString(searchTerm)})
         resultsViewController.tableView.reloadData()
     }
 

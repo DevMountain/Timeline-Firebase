@@ -18,7 +18,7 @@ class AddPhotoTableViewController: UITableViewController, UINavigationController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.photoButton.imageView?.contentMode = .ScaleAspectFill
     }
     
     @IBAction func addPhotoTapped(sender: AnyObject) {

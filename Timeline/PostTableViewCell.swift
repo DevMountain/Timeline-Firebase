@@ -21,6 +21,8 @@ class PostTableViewCell: UITableViewCell {
     
     func updateWithPost(post: Post) {
         
+        self.postImageView.image = nil
+        
         self.likesLabel.text = "\(post.likes.count) likes"
         self.commentsLabel.text = "\(post.comments.count) comments"
         

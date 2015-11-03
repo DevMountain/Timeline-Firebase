@@ -46,7 +46,6 @@ class PostDetailTableViewController: UITableViewController {
             
             if let post = post {
                 self.updateWithPost(post)
-                print("Like added.")
             }
         }
     }
@@ -67,7 +66,6 @@ class PostDetailTableViewController: UITableViewController {
                     
                     if let post = post {
                         self.updateWithPost(post)
-                        print("Comment added.")
                     }
                 })
             }
@@ -77,6 +75,7 @@ class PostDetailTableViewController: UITableViewController {
         
         presentViewController(commentAlert, animated: true, completion: nil)
     }
+
     
     // MARK: - Table view data source
 

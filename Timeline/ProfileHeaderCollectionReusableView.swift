@@ -9,37 +9,63 @@
 import UIKit
 
 class ProfileHeaderCollectionReusableView: UICollectionReusableView {
-        
+    
+    var delegate: ProfileHeaderCollectionReusableViewDelegate?
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var urlButton: UIButton!
     @IBOutlet weak var followUserButton: UIButton!
     
+    @IBAction func urlButtonTapped(sender: UIButton) {
+        
+        self.delegate?.userTappedURLButton(sender)
+    }
+    
+    @IBAction func followActionButtonTapped(sender: UIButton) {
+        
+        self.delegate?.userTappedFollowActionButton(sender)
+    }
+    
     func updateWithUser(user: User) {
         
-        ImageController.imageForIdentifier(user.identifier!) { (image) -> Void in
-            self.imageView.image = image
-        }
-        
-        bioLabel.text = user.bio
-        
-        if user.bio == nil {
-            bioLabel.removeFromSuperview()
-        }
-        
-        if user.url == nil {
-            urlButton.removeFromSuperview()
-        }
-        
-        if user == UserController.currentUser() {
-            followUserButton.removeFromSuperview()
+        if let bio = user.bio {
+            bioLabel.text = bio
         } else {
-            UserController.userFollowedByUser(user, followedBy: UserController.currentUser()) { (follows) -> Void in
-                
-                if follows {
-                    self.followUserButton.setTitle("Unfollow", forState: .Normal)
-                }
+            
+            if bioLabel != nil {
+                bioLabel.removeFromSuperview()
             }
         }
+        
+        if let url = user.url {
+            urlButton.setTitle(url, forState: .Normal)
+        } else {
+            
+            if urlButton != nil {
+                urlButton.removeFromSuperview()
+            }
+        }
+        
+        if user == UserController.sharedController.currentUser {
+            followUserButton.setTitle("You", forState: .Normal)
+            followUserButton.enabled = false
+        } else {
+            UserController.userFollowsUser(UserController.sharedController.currentUser, followsUser: user, completion: { (follows) -> Void in
+                if follows {
+                    self.followUserButton.setTitle("Unfollow", forState: .Normal)
+                } else {
+                    self.followUserButton.setTitle("Follow", forState: .Normal)
+                }
+            })
+            
+        }
     }
+}
+
+protocol ProfileHeaderCollectionReusableViewDelegate {
+    
+    func userTappedFollowActionButton(sender: UIButton)
+    func userTappedURLButton(sender: UIButton)
+    
 }

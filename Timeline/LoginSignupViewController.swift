@@ -13,6 +13,7 @@ class LoginSignupViewController: UIViewController {
     enum ViewMode {
         case Login
         case Signup
+        case Edit
     }
     
     @IBOutlet weak var usernameField: UITextField!
@@ -23,6 +24,8 @@ class LoginSignupViewController: UIViewController {
     @IBOutlet weak var actionButton: UIButton!
     
     var mode: ViewMode = .Signup
+
+    var user: User?
     
     var fieldsAreValid: Bool {
         
@@ -35,6 +38,11 @@ class LoginSignupViewController: UIViewController {
         case .Signup:
             
             return !(usernameField.text!.isEmpty || emailField.text!.isEmpty || passwordField.text!.isEmpty)
+        
+        case .Edit:
+            
+            return !(usernameField.text!.isEmpty)
+            
         }
     }
     
@@ -59,6 +67,22 @@ class LoginSignupViewController: UIViewController {
             usernameField.removeFromSuperview()
             bioField.removeFromSuperview()
             urlField.removeFromSuperview()
+        
+        case .Edit:
+        
+            actionButton.setTitle("Update", forState: .Normal)
+            
+            emailField.removeFromSuperview()
+            passwordField.removeFromSuperview()
+
+            if let user = self.user {
+                
+                usernameField.text = user.username
+                bioField.text = user.bio
+                urlField.text = user.url
+                
+            }
+            
         }
     }
 
@@ -89,12 +113,31 @@ class LoginSignupViewController: UIViewController {
                     }
                 })
                 
+            case .Edit:
+                
+                UserController.updateUser(self.user!, username: self.usernameField.text!, bio: self.bioField.text, url: self.urlField.text, completion: { (success, user) -> Void in
+                    
+                    if success {
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    } else {
+                        self.presentValidationAlertWithTitle("Unable to Update User", text: "Please check your information and try again.")
+                    }
+                })
+                
             }
         } else {
             
             self.presentValidationAlertWithTitle("Missing Information", text: "Please check your information and try again.")
         }
         
+    }
+    
+    func updateWithUser(user: User) {
+        
+        self.user = user
+        mode = .Edit
+        
+        updateViewForMode(mode)
     }
     
     func presentValidationAlertWithTitle(title: String, text: String) {

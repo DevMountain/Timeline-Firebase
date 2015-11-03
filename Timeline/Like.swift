@@ -8,7 +8,10 @@
 
 import Foundation
 
-struct Like: Equatable {
+struct Like: Equatable, FirebaseType {
+    
+    private let UserKey = "username"
+    private let PostKey = "post"
 
     let username: String
     let postIdentifier: String
@@ -18,6 +21,35 @@ struct Like: Equatable {
         
         self.username = username
         self.postIdentifier = postIdentifier
+        self.identifier = identifier
+    }
+    
+    // MARK: FirebaseType
+    
+    var endpoint: String {
+        
+        return "/posts/\(self.postIdentifier)/likes/"
+    }
+    
+    var jsonValue: [String: AnyObject] {
+        
+        return [UserKey: self.username, PostKey: self.postIdentifier]
+    }
+    
+    init?(json: [String: AnyObject], identifier: String) {
+        
+        guard let postIdentifier = json[PostKey] as? String,
+            let username = json[UserKey] as? String else {
+                
+                self.identifier = ""
+                self.postIdentifier = ""
+                self.username = ""
+                
+                return nil
+        }
+        
+        self.postIdentifier = postIdentifier
+        self.username = username
         self.identifier = identifier
     }
 }

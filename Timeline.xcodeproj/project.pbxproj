@@ -21,7 +21,6 @@
 		687060B11BE1D3C20074614B /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060AD1BE1D3C20074614B /* Like.swift */; };
 		687060C01BE1D55D0074614B /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060BC1BE1D55D0074614B /* ImageController.swift */; };
 		687060C11BE1D55D0074614B /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060BD1BE1D55D0074614B /* PostController.swift */; };
-		687060C21BE1D55D0074614B /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060BE1BE1D55D0074614B /* Timeline.swift */; };
 		687060C31BE1D55D0074614B /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060BF1BE1D55D0074614B /* UserController.swift */; };
 		687060C61BE292170074614B /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060C51BE292170074614B /* LoginSignupViewController.swift */; };
 		687060CA1BE2AB730074614B /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060C91BE2AB730074614B /* TimelineTableViewController.swift */; };
@@ -31,6 +30,13 @@
 		687060D21BE2AE910074614B /* AddPhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060D11BE2AE910074614B /* AddPhotoTableViewController.swift */; };
 		687060D41BE2AEAE0074614B /* LoginSignupPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060D31BE2AEAE0074614B /* LoginSignupPickerViewController.swift */; };
 		687060D61BE308B60074614B /* UserListSearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687060D51BE308B60074614B /* UserListSearchResultsTableViewController.swift */; };
+		687F90F11BE5726300A3D360 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687F90F01BE5726300A3D360 /* Firebase.framework */; };
+		687F90F31BE5728D00A3D360 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 687F90F21BE5728D00A3D360 /* libicucore.tbd */; };
+		687F90F51BE5729500A3D360 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 687F90F41BE5729500A3D360 /* libc++.tbd */; };
+		687F90F71BE5729C00A3D360 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687F90F61BE5729C00A3D360 /* CFNetwork.framework */; };
+		687F90F91BE572A100A3D360 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687F90F81BE572A100A3D360 /* Security.framework */; };
+		687F90FB1BE572A700A3D360 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 687F90FA1BE572A700A3D360 /* SystemConfiguration.framework */; };
+		687F90FE1BE5731E00A3D360 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687F90FD1BE5731E00A3D360 /* FirebaseController.swift */; };
 		68F4CDF41BE3FC0E00D8CD83 /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F4CDF31BE3FC0E00D8CD83 /* ProfileHeaderCollectionReusableView.swift */; };
 		68F4CDF61BE4039500D8CD83 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F4CDF51BE4039500D8CD83 /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -73,7 +79,6 @@
 		687060AD1BE1D3C20074614B /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		687060BC1BE1D55D0074614B /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		687060BD1BE1D55D0074614B /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
-		687060BE1BE1D55D0074614B /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		687060BF1BE1D55D0074614B /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		687060C51BE292170074614B /* LoginSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
 		687060C91BE2AB730074614B /* TimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +88,13 @@
 		687060D11BE2AE910074614B /* AddPhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoTableViewController.swift; sourceTree = "<group>"; };
 		687060D31BE2AEAE0074614B /* LoginSignupPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignupPickerViewController.swift; sourceTree = "<group>"; };
 		687060D51BE308B60074614B /* UserListSearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListSearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		687F90F01BE5726300A3D360 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		687F90F21BE5728D00A3D360 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		687F90F41BE5729500A3D360 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		687F90F61BE5729C00A3D360 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		687F90F81BE572A100A3D360 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		687F90FA1BE572A700A3D360 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		687F90FD1BE5731E00A3D360 /* FirebaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		68F4CDF31BE3FC0E00D8CD83 /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		68F4CDF51BE4039500D8CD83 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +104,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				687F90FB1BE572A700A3D360 /* SystemConfiguration.framework in Frameworks */,
+				687F90F91BE572A100A3D360 /* Security.framework in Frameworks */,
+				687F90F71BE5729C00A3D360 /* CFNetwork.framework in Frameworks */,
+				687F90F51BE5729500A3D360 /* libc++.tbd in Frameworks */,
+				687F90F31BE5728D00A3D360 /* libicucore.tbd in Frameworks */,
+				687F90F11BE5726300A3D360 /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,20 +155,11 @@
 			children = (
 				687060771BE1D16D0074614B /* AppDelegate.swift */,
 				687060A71BE1D3740074614B /* Main.storyboard */,
-				687060C91BE2AB730074614B /* TimelineTableViewController.swift */,
-				686A8D4A1BE42620006E0056 /* PostTableViewCell.swift */,
-				6836484A1BE4359600B538CE /* PostCommentTableViewCell.swift */,
-				68F4CDF31BE3FC0E00D8CD83 /* ProfileHeaderCollectionReusableView.swift */,
-				68F4CDF51BE4039500D8CD83 /* ImageCollectionViewCell.swift */,
-				687060CB1BE2AE6A0074614B /* PostDetailTableViewController.swift */,
-				687060CD1BE2AE780074614B /* UserListSearchTableViewController.swift */,
-				687060D51BE308B60074614B /* UserListSearchResultsTableViewController.swift */,
-				687060CF1BE2AE840074614B /* ProfileViewController.swift */,
-				687060D11BE2AE910074614B /* AddPhotoTableViewController.swift */,
-				687060D31BE2AEAE0074614B /* LoginSignupPickerViewController.swift */,
-				687060C51BE292170074614B /* LoginSignupViewController.swift */,
+				687F90FD1BE5731E00A3D360 /* FirebaseController.swift */,
+				68F904C51BE56F9800694A13 /* Views */,
 				687060C41BE1D5660074614B /* Model Controllers */,
 				687060B21BE1D3C80074614B /* Model */,
+				687F90FC1BE572B900A3D360 /* Frameworks */,
 				6870607E1BE1D16D0074614B /* Assets.xcassets */,
 				687060801BE1D16D0074614B /* LaunchScreen.storyboard */,
 				687060831BE1D16D0074614B /* Info.plist */,
@@ -192,10 +201,41 @@
 			children = (
 				687060BC1BE1D55D0074614B /* ImageController.swift */,
 				687060BD1BE1D55D0074614B /* PostController.swift */,
-				687060BE1BE1D55D0074614B /* Timeline.swift */,
 				687060BF1BE1D55D0074614B /* UserController.swift */,
 			);
 			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		687F90FC1BE572B900A3D360 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				687F90FA1BE572A700A3D360 /* SystemConfiguration.framework */,
+				687F90F81BE572A100A3D360 /* Security.framework */,
+				687F90F61BE5729C00A3D360 /* CFNetwork.framework */,
+				687F90F41BE5729500A3D360 /* libc++.tbd */,
+				687F90F21BE5728D00A3D360 /* libicucore.tbd */,
+				687F90F01BE5726300A3D360 /* Firebase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68F904C51BE56F9800694A13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				687060C91BE2AB730074614B /* TimelineTableViewController.swift */,
+				686A8D4A1BE42620006E0056 /* PostTableViewCell.swift */,
+				68F4CDF51BE4039500D8CD83 /* ImageCollectionViewCell.swift */,
+				687060CB1BE2AE6A0074614B /* PostDetailTableViewController.swift */,
+				6836484A1BE4359600B538CE /* PostCommentTableViewCell.swift */,
+				687060CD1BE2AE780074614B /* UserListSearchTableViewController.swift */,
+				687060D51BE308B60074614B /* UserListSearchResultsTableViewController.swift */,
+				687060CF1BE2AE840074614B /* ProfileViewController.swift */,
+				68F4CDF31BE3FC0E00D8CD83 /* ProfileHeaderCollectionReusableView.swift */,
+				687060D11BE2AE910074614B /* AddPhotoTableViewController.swift */,
+				687060D31BE2AEAE0074614B /* LoginSignupPickerViewController.swift */,
+				687060C51BE292170074614B /* LoginSignupViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +306,7 @@
 				TargetAttributes = {
 					687060731BE1D16D0074614B = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 357NQPN89X;
 					};
 					687060871BE1D16D0074614B = {
 						CreatedOnToolsVersion = 7.1;
@@ -331,7 +372,6 @@
 			files = (
 				687060D21BE2AE910074614B /* AddPhotoTableViewController.swift in Sources */,
 				687060C31BE1D55D0074614B /* UserController.swift in Sources */,
-				687060C21BE1D55D0074614B /* Timeline.swift in Sources */,
 				687060CC1BE2AE6A0074614B /* PostDetailTableViewController.swift in Sources */,
 				687060AF1BE1D3C20074614B /* Post.swift in Sources */,
 				687060D01BE2AE840074614B /* ProfileViewController.swift in Sources */,
@@ -349,6 +389,7 @@
 				687060C61BE292170074614B /* LoginSignupViewController.swift in Sources */,
 				687060C01BE1D55D0074614B /* ImageController.swift in Sources */,
 				687060CE1BE2AE780074614B /* UserListSearchTableViewController.swift in Sources */,
+				687F90FE1BE5731E00A3D360 /* FirebaseController.swift in Sources */,
 				68F4CDF61BE4039500D8CD83 /* ImageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +532,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Timeline",
+				);
 				INFOPLIST_FILE = Timeline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devmtn.Timeline;
@@ -502,6 +548,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Timeline",
+				);
 				INFOPLIST_FILE = Timeline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devmtn.Timeline;
