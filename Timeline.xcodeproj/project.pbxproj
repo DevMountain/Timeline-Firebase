@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014C1BBE1BE942CB001A52DC /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BBD1BE942CB001A52DC /* TimelineTableViewController.swift */; };
+		014C1BC01BE94494001A52DC /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BBF1BE94494001A52DC /* PostDetailTableViewController.swift */; };
+		014C1BC21BE94618001A52DC /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BC11BE94618001A52DC /* UserSearchTableViewController.swift */; };
+		014C1BC41BE9484F001A52DC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BC31BE9484F001A52DC /* ProfileViewController.swift */; };
+		014C1BC61BE94C91001A52DC /* AddPhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BC51BE94C91001A52DC /* AddPhotoTableViewController.swift */; };
+		014C1BC81BE9548B001A52DC /* LoginSignupChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BC71BE9548B001A52DC /* LoginSignupChoiceViewController.swift */; };
+		014C1BCA1BE95542001A52DC /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BC91BE95542001A52DC /* LoginSignupViewController.swift */; };
+		014C1BCC1BE956A8001A52DC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BCB1BE956A8001A52DC /* User.swift */; };
+		014C1BCE1BE95B22001A52DC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BCD1BE95B22001A52DC /* Post.swift */; };
+		014C1BD01BE95BBF001A52DC /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BCF1BE95BBF001A52DC /* Comment.swift */; };
+		014C1BD21BE95D09001A52DC /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BD11BE95D09001A52DC /* Like.swift */; };
+		014C1BD41BE96083001A52DC /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BD31BE96083001A52DC /* UserController.swift */; };
+		014C1BD61BE969B0001A52DC /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BD51BE969B0001A52DC /* PostController.swift */; };
+		014C1BD81BE972CC001A52DC /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BD71BE972CC001A52DC /* ImageController.swift */; };
 		01E3FC251BE92C7600187536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E3FC241BE92C7600187536 /* AppDelegate.swift */; };
 		01E3FC2A1BE92C7600187536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01E3FC281BE92C7600187536 /* Main.storyboard */; };
 		01E3FC2C1BE92C7600187536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01E3FC2B1BE92C7600187536 /* Assets.xcassets */; };
@@ -33,6 +47,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014C1BBD1BE942CB001A52DC /* TimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
+		014C1BBF1BE94494001A52DC /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
+		014C1BC11BE94618001A52DC /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewController.swift; sourceTree = "<group>"; };
+		014C1BC31BE9484F001A52DC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		014C1BC51BE94C91001A52DC /* AddPhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoTableViewController.swift; sourceTree = "<group>"; };
+		014C1BC71BE9548B001A52DC /* LoginSignupChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignupChoiceViewController.swift; sourceTree = "<group>"; };
+		014C1BC91BE95542001A52DC /* LoginSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
+		014C1BCB1BE956A8001A52DC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		014C1BCD1BE95B22001A52DC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		014C1BCF1BE95BBF001A52DC /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		014C1BD11BE95D09001A52DC /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		014C1BD31BE96083001A52DC /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		014C1BD51BE969B0001A52DC /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		014C1BD71BE972CC001A52DC /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		01E3FC211BE92C7600187536 /* Timeline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timeline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01E3FC241BE92C7600187536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01E3FC291BE92C7600187536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +100,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012A8F041BE975A100283BF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				014C1BCB1BE956A8001A52DC /* User.swift */,
+				014C1BCD1BE95B22001A52DC /* Post.swift */,
+				014C1BD11BE95D09001A52DC /* Like.swift */,
+				014C1BCF1BE95BBF001A52DC /* Comment.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		012A8F051BE975AD00283BF2 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				014C1BD31BE96083001A52DC /* UserController.swift */,
+				014C1BD51BE969B0001A52DC /* PostController.swift */,
+				014C1BD71BE972CC001A52DC /* ImageController.swift */,
+			);
+			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		012A8F061BE975B800283BF2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				014C1BC91BE95542001A52DC /* LoginSignupViewController.swift */,
+				014C1BC71BE9548B001A52DC /* LoginSignupChoiceViewController.swift */,
+				014C1BC51BE94C91001A52DC /* AddPhotoTableViewController.swift */,
+				014C1BC31BE9484F001A52DC /* ProfileViewController.swift */,
+				014C1BC11BE94618001A52DC /* UserSearchTableViewController.swift */,
+				014C1BBF1BE94494001A52DC /* PostDetailTableViewController.swift */,
+				014C1BBD1BE942CB001A52DC /* TimelineTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		01E3FC181BE92C7600187536 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +160,9 @@
 			children = (
 				01E3FC241BE92C7600187536 /* AppDelegate.swift */,
 				01E3FC281BE92C7600187536 /* Main.storyboard */,
+				012A8F041BE975A100283BF2 /* Model */,
+				012A8F051BE975AD00283BF2 /* Model Controllers */,
+				012A8F061BE975B800283BF2 /* View Controllers */,
 				01E3FC2B1BE92C7600187536 /* Assets.xcassets */,
 				01E3FC2D1BE92C7600187536 /* LaunchScreen.storyboard */,
 				01E3FC301BE92C7600187536 /* Info.plist */,
@@ -253,7 +319,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014C1BCA1BE95542001A52DC /* LoginSignupViewController.swift in Sources */,
+				014C1BC81BE9548B001A52DC /* LoginSignupChoiceViewController.swift in Sources */,
+				014C1BC61BE94C91001A52DC /* AddPhotoTableViewController.swift in Sources */,
+				014C1BBE1BE942CB001A52DC /* TimelineTableViewController.swift in Sources */,
 				01E3FC251BE92C7600187536 /* AppDelegate.swift in Sources */,
+				014C1BD81BE972CC001A52DC /* ImageController.swift in Sources */,
+				014C1BD41BE96083001A52DC /* UserController.swift in Sources */,
+				014C1BCC1BE956A8001A52DC /* User.swift in Sources */,
+				014C1BD21BE95D09001A52DC /* Like.swift in Sources */,
+				014C1BC41BE9484F001A52DC /* ProfileViewController.swift in Sources */,
+				014C1BC21BE94618001A52DC /* UserSearchTableViewController.swift in Sources */,
+				014C1BC01BE94494001A52DC /* PostDetailTableViewController.swift in Sources */,
+				014C1BD61BE969B0001A52DC /* PostController.swift in Sources */,
+				014C1BD01BE95BBF001A52DC /* Comment.swift in Sources */,
+				014C1BCE1BE95B22001A52DC /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +558,7 @@
 				01E3FC4B1BE92C7700187536 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01E3FC4C1BE92C7700187536 /* Build configuration list for PBXNativeTarget "TimelineTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +567,7 @@
 				01E3FC4E1BE92C7700187536 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01E3FC4F1BE92C7700187536 /* Build configuration list for PBXNativeTarget "TimelineUITests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +576,7 @@
 				01E3FC511BE92C7700187536 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
