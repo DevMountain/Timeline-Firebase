@@ -458,7 +458,7 @@
             </objects>
             <point key="canvasLocation" x="2512" y="450"/>
         </scene>
-        <!--Title-->
+        <!--Post Detail Table View Controller-->
         <scene sceneID="9uv-o5-vx3">
             <objects>
                 <tableViewController id="ekd-vQ-zTH" customClass="PostDetailTableViewController" customModule="Timeline" customModuleProvider="target" sceneMemberID="viewController">
@@ -509,6 +509,9 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <animations/>
                             <state key="normal" title="Add Comment"/>
+                            <connections>
+                                <action selector="addCommentTapped:" destination="ekd-vQ-zTH" eventType="touchUpInside" id="TdN-dr-9kv"/>
+                            </connections>
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="QF0-1h-k3X" detailTextLabel="sBd-ZI-WhX" style="IBUITableViewCellStyleSubtitle" id="bvV-gN-lOZ">
@@ -545,11 +548,13 @@
                             <outlet property="delegate" destination="ekd-vQ-zTH" id="BNy-TU-17F"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="cbN-WA-gYW"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Title" id="vUU-tr-oBV">
-                        <barButtonItem key="rightBarButtonItem" title="Like" id="BMe-EJ-0df"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="vUU-tr-oBV">
+                        <barButtonItem key="rightBarButtonItem" title="Like" id="BMe-EJ-0df">
+                            <connections>
+                                <action selector="likeTapped:" destination="ekd-vQ-zTH" id="zsa-ld-89h"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>

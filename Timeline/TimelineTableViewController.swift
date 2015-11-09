@@ -42,6 +42,8 @@ class TimelineTableViewController: UITableViewController {
                     self.tableView.reloadData()
                     self.refreshControl?.endRefreshing()
                 })
+            } else {
+                self.refreshControl?.endRefreshing()
             }
         }
     }

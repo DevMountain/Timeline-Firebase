@@ -60,21 +60,22 @@ extension FirebaseType {
         
         var endpointBase: Firebase
         
-        if let childID = self.identifier {
-            endpointBase = FirebaseController.base.childByAppendingPath(endpoint).childByAppendingPath(childID)
+        if let identifier = self.identifier {
+            endpointBase = FirebaseController.base.childByAppendingPath(endpoint).childByAppendingPath(identifier)
         } else {
             endpointBase = FirebaseController.base.childByAppendingPath(endpoint).childByAutoId()
             self.identifier = endpointBase.key
         }
         
         endpointBase.updateChildValues(self.jsonValue)
-        
     }
     
     func delete() {
         
-        let endpointBase: Firebase = FirebaseController.base.childByAppendingPath(endpoint).childByAppendingPath(self.identifier)
-        
-        endpointBase.removeValue()
+        if let identifier = self.identifier {
+            let endpointBase: Firebase = FirebaseController.base.childByAppendingPath(endpoint).childByAppendingPath(identifier)
+            
+            endpointBase.removeValue()
+        }
     }
 }

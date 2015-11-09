@@ -14,7 +14,39 @@ class PostController {
     
     static func fetchTimelineForUser(user: User, completion: (posts: [Post]?) -> Void) {
         
-        completion(posts: mockPosts())
+        UserController.followedByUser(user) { (followed) in
+            
+            var allPosts: [Post] = []
+            let dispatchGroup = dispatch_group_create()
+            
+            dispatch_group_enter(dispatchGroup)
+            postsForUser(UserController.sharedController.currentUser, completion: { (posts) -> Void in
+                
+                if let posts = posts {
+                    allPosts += posts
+                }
+                
+                dispatch_group_leave(dispatchGroup)
+            })
+            
+            if let followed = followed {
+                for user in followed {
+                    
+                    dispatch_group_enter(dispatchGroup)
+                    postsForUser(user, completion: { (posts) in
+                        if let posts = posts {
+                            allPosts += posts
+                        }
+                        dispatch_group_leave(dispatchGroup)
+                    })
+                }
+            }
+            
+            dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), { () -> Void in
+                let orderedPosts = orderPosts(allPosts)
+                completion(posts: orderedPosts)
+            })
+        }
     }
     
     static func addPost(image: UIImage, caption: String?, completion: (success: Bool, post: Post?) -> Void) {
@@ -22,7 +54,7 @@ class PostController {
         ImageController.uploadImage(image) { (identifier) -> Void in
             
             if let identifier = identifier {
-                var post = Post(imageEndpoint: identifier, caption: caption)
+                var post = Post(imageEndpoint: identifier, caption: caption, username: UserController.sharedController.currentUser.username)
                 post.save()
                 completion(success: true, post: post)
             } else {
@@ -135,23 +167,23 @@ class PostController {
         return posts.sort({$0.0.identifier > $0.1.identifier})
     }
     
-    static func mockPosts() -> [Post] {
-        
-        let sampleImageIdentifier = "-K1l4125TYvKMc7rcp5e"
-        
-        let like1 = Like(username: "darth", postIdentifier: "1234")
-        let like2 = Like(username: "look", postIdentifier: "4566")
-        let like3 = Like(username: "em0r0r", postIdentifier: "43212")
-        
-        let comment1 = Comment(username: "ob1kenob", text: "use the force", postIdentifier: "1234")
-        let comment2 = Comment(username: "darth", text: "join the dark side", postIdentifier: "4566")
-        
-        let post1 = Post(imageEndpoint: sampleImageIdentifier, caption: "Nice shot!", comments: [comment1, comment2], likes: [like1, like2, like3])
-        let post2 = Post(imageEndpoint: sampleImageIdentifier, caption: "Great lookin' kids!")
-        let post3 = Post(imageEndpoint: sampleImageIdentifier, caption: "Love the way she looks when she smiles like that.")
-        
-        return [post1, post2, post3]
-    }
+//    static func mockPosts() -> [Post] {
+//        
+//        let sampleImageIdentifier = "-K1l4125TYvKMc7rcp5e"
+//        
+//        let like1 = Like(username: "darth", postIdentifier: "1234")
+//        let like2 = Like(username: "look", postIdentifier: "4566")
+//        let like3 = Like(username: "em0r0r", postIdentifier: "43212")
+//        
+//        let comment1 = Comment(username: "ob1kenob", text: "use the force", postIdentifier: "1234")
+//        let comment2 = Comment(username: "darth", text: "join the dark side", postIdentifier: "4566")
+//        
+//        let post1 = Post(imageEndpoint: sampleImageIdentifier, caption: "Nice shot!", comments: [comment1, comment2], likes: [like1, like2, like3])
+//        let post2 = Post(imageEndpoint: sampleImageIdentifier, caption: "Great lookin' kids!")
+//        let post3 = Post(imageEndpoint: sampleImageIdentifier, caption: "Love the way she looks when she smiles like that.")
+//        
+//        return [post1, post2, post3]
+//    }
     
     
 }
