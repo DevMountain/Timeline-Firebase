@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0142FCB11BEBE5B000BFAD63 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142FCB01BEBE5B000BFAD63 /* PostTableViewCell.swift */; };
 		014C1BBE1BE942CB001A52DC /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BBD1BE942CB001A52DC /* TimelineTableViewController.swift */; };
 		014C1BC01BE94494001A52DC /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BBF1BE94494001A52DC /* PostDetailTableViewController.swift */; };
 		014C1BC21BE94618001A52DC /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014C1BC11BE94618001A52DC /* UserSearchTableViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0142FCB01BEBE5B000BFAD63 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		014C1BBD1BE942CB001A52DC /* TimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
 		014C1BBF1BE94494001A52DC /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
 		014C1BC11BE94618001A52DC /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		01DAA8891BEA857A0042FE5A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0142FCB01BEBE5B000BFAD63 /* PostTableViewCell.swift */,
 				01DAA88A1BEA99460042FE5A /* ImageCollectionViewCell.swift */,
 				01DAA8871BEA856E0042FE5A /* ProfileHeaderCollectionReusableView.swift */,
 			);
@@ -341,6 +344,7 @@
 				014C1BC61BE94C91001A52DC /* AddPhotoTableViewController.swift in Sources */,
 				01DAA8861BEA754D0042FE5A /* UserSearchResultsTableViewController.swift in Sources */,
 				014C1BBE1BE942CB001A52DC /* TimelineTableViewController.swift in Sources */,
+				0142FCB11BEBE5B000BFAD63 /* PostTableViewCell.swift in Sources */,
 				01E3FC251BE92C7600187536 /* AppDelegate.swift in Sources */,
 				01DAA88B1BEA99460042FE5A /* ImageCollectionViewCell.swift in Sources */,
 				014C1BD81BE972CC001A52DC /* ImageController.swift in Sources */,

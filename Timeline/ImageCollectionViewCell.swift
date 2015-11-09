@@ -15,7 +15,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     func updateWithImageIdentifier(identifier: String) {
         
         ImageController.imageForIdentifier(identifier) { (image) -> Void in
-//            self.imageView.image = image
+            self.imageView.image = image
         }
         
     }
