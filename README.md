@@ -817,10 +817,8 @@ var currentUser: User! {
         
         if let newValue = newValue {
             NSUserDefaults.standardUserDefaults().setValue(newValue.jsonValue, forKey: UserKey)
-            NSUserDefaults.standardUserDefaults().synchronize()
         } else {
             NSUserDefaults.standardUserDefaults().removeObjectForKey(UserKey)
-            NSUserDefaults.standardUserDefaults().synchronize()
         }
     }
 }
